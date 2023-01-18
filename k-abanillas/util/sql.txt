@@ -1,0 +1,103 @@
+create database K_abanillas;
+use K_abanillas;
+create table Logink
+(
+Apellido nvarchar(150),
+Nombre nvarchar(70) not null,
+Contraseña nvarchar(120) not null,
+Genero varchar(20),
+DNI int,
+Correo nvarchar(150),
+Cargo varchar(150),
+Tipo_Salon varchar(40),
+Imagen longblob
+);
+
+insert into Logink
+values("Vásquez Valverde","Aracely","14cc19e79d78bc198b81f58eafa5dbd4","Mujer","60262078","aracely123@gmail.com","Asistente",LOAD_FILE('C:/imagen/aracely.png'));
+
+select * from Logink;
+
+update Logink
+set Imagen=LOAD_FILE('C:/imagen/aracely.png')
+where Imagen="";
+select * from Logink;
+
+create table Home_asistencia
+(
+CodAsistencia int not null auto_increment,
+Estado varchar(150) not null,
+Hora nvarchar(60),
+Fecha nvarchar(60),
+Justificacion nvarchar(70),
+Tutora varchar(40),
+primary key(CodAsistencia)
+);
+
+insert into Home_asistencia (Estado,Hora,Fecha,Justificacion,Tutora)
+values("Asistio","17 : 14 : 48","08/11/2022","","");
+
+select * from Home_asistencia;
+................
+create table Home_Notas
+(
+CodNotas int not null auto_increment,
+Justificacion nvarchar(250),
+Notas double not null,
+Evaluacion varchar(60),
+Hora nvarchar(60),
+Fecha nvarchar(60),
+Tutora nvarchar (150),
+primary key (CodNotas)
+);
+Alter table alumno add foreign key(idcarrera) references carrera(id);
+
+
+insert into Home_Notas
+values("A32N50","Ninguna","Ninguna","18","17 : 14 : 48","08/12/2022","Ramirez cosmica Juliana");
+$insert="INSERT INTO Home_notas (Justificacion,Observacion,Notas,Evaluacion,Hora,Fecha,Tutora) VALUES ('$Justificacion','$Observacion','$Notas','$Evaluacion','$Hora','$Fecha','$Tutora')";
+
+select * from Home_Notas;
+
+
+create table Home_Pagos
+(
+CodPagos varchar(50) not null,
+monto double not null,
+Descripcion nvarchar(250),
+Hora nvarchar(60),
+Fecha nvarchar(60),
+Confirmacion varchar(15),
+Tutora nvarchar (150),
+Justificacion nvarchar(250)
+);
+
+
+values("A597N75",150,"Matrícula","17 : 14 : 48","08/12/2022","Confirmado","Ramirez cosmica Juliana","Ninguna","Tarjeta");
+$insert="INSERT INTO Home_Alumno (CodPagos,monto,Descripcion,Hora,Fecha,Confirmacion,Tutora,Justificacion) VALUES ('$CodPagos','$monto','$Descripcion','$Hora','$Fecha','$Confirmacion','$Tutora','$Justificacion')";
+select * from Home_Pagos;
+
+create table Home_Alumno
+(
+idAlumno int not null AUTO_INCREMENT,
+CodAlumno varchar(70) not null,
+NombreCompleto nvarchar(250) not null,
+NombreCompletoApoderado nvarchar(250),
+DNI int not null,
+Domicilio nvarchar(150),
+Telefono int not null,
+TelefonoApoderado int,
+Carrera nvarchar(100) not null,
+Relacion varchar(60),
+Tutora nvarchar (150),
+primary key (idAlumno)
+);
+
+
+insert into Home_Alumno (CodAlumno,NombreCompleto,NombreCompletoApoderado,DNI,Domicilio,Telefono,TelefonoApoderado,Carrera,Relacion,Tutora)
+values("A5108","Alvaro Jimenez Rodrigo","Sandra Jimenez sanchez",60812458,"Santa Anita: Coop, viñas Mz 5, Lt 23",902452705,902452705,"Ingeniería de sistemas","Madre","Ramirez cosmica Juliana");
+select * from Home_Alumno;
+
+
+
+select idAlumno, CodAlumno, NombreCompleto from Home_Alumno
