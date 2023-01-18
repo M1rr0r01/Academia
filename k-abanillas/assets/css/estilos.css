@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+.todos {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F7FAFA;
+    padding: 0;
+    text-decoration: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    background: url(../Image/1.jpg);   
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    
+}
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.positionEstado{
+    margin:2% 0% -4% 86%;
+}
+.positionFecha{
+    margin:1% 14% -2% 40%;
+    text-align: right;
+}
+.positionEvaluacion{
+    margin:1% 20% 0% 55%;
+    text-align: right;
+}
+.positionSemanal{
+    margin:1% 43% -5% -15%;
+    text-align: right;
+}
+.positionSimulacro{
+    margin:3% 19% 0% -15%;
+    text-align: right;
+}
+.positionSemanal1{
+    margin:1% 34% -5% -15%;
+    text-align: right;
+}
+.positionSimulacro1{
+    margin:3% 6.5% -3% -15%;
+    text-align: right;
+}
+
+.positionSemanal2{
+    margin:1% 40% -5% -15%;
+    text-align: right;
+}
+.positionSimulacro2{
+    margin:3% 26% -3% -15%;
+    text-align: right;
+}
+.positioninput{
+    margin:0% 0% 0% 0%;
+     
+}
+.positionEstados{
+    margin:0% 0% 0% 0%;
+    text-align: left;
+}
+
+.posicionbotones{
+    margin: 0% 0% 0% 45%;
+  }
+  .posicionbotons{
+    margin: -13% 0% 0% 50%;
+  }
+ 
+  .positionEvaluacion1{
+    margin:1% 32.5% 0% 45%;
+    text-align: right;
+}
+.table{
+    margin-top: 20px;
+    width: 100%;
+
+}
+td,th{
+    background-color: beige;
+    text-align: center;
+    vertical-align: middle;
+}
+.title_edit{
+   position:absolute;
+   color: white;
+   text-decoration: none; 
+}
+ .title_edit:hover{
+    text-decoration:underline;
+ }
+
+ .btn-group, .btn-group-vertical{
+    position: absolute !important;
+ }
+ 
